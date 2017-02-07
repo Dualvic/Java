@@ -2,7 +2,7 @@ package bicicleta;
 
 public class Bicicleta {
 	
-	int id= 0;
+	private int id= 0;
 	
 	// constructors
 	
