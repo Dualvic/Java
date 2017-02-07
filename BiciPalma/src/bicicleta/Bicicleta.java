@@ -19,10 +19,4 @@ public class Bicicleta {
 	public int getId() {
 		return this.id;
 	}
-	
-	// setters
-	
-	public void setId(int id) {
-		this.id = id;
-	}
 }
