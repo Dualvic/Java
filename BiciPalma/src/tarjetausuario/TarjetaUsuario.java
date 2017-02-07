@@ -4,8 +4,8 @@ public class TarjetaUsuario {
 	
 		//variables
 	
-		String id = "000000000";
-		boolean activada = false;
+		private String id = "000000000";
+		private boolean activada = false;
 		
 		//constructors
 		
