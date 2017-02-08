@@ -9,9 +9,9 @@ import bicicleta.Bicicleta;
 
 public class Estacion {
 
-	private int id;
-	private String direccion;
-	private int numeroAnclajes;
+	private int id = 0;
+	private String direccion = null;
+	private int numeroAnclajes = 0;
 	private Bicicleta[] anclajes;
 
 	// Constructor
