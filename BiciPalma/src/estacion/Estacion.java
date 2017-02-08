@@ -12,7 +12,7 @@ public class Estacion {
 	private int id = 0;
 	private String direccion = null;
 	private int numeroAnclajes = 0;
-	private Bicicleta[] anclajes;
+	private Bicicleta[] anclajes = null;
 
 	// Constructor
 
