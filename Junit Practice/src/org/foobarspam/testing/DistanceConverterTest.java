@@ -10,12 +10,10 @@ public class DistanceConverterTest {
 	double feet, meters, inches, cm;
 	
 	@Before
-	public void setUp() {
-		
+	public void setUp() {		
 		feet = 1;
 		meters = 1;
 		cm = 10;
-
 	}
 	
 	@Test
