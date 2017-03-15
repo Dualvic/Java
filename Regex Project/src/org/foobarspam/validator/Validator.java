@@ -5,15 +5,15 @@ import java.util.regex.Pattern;
 
 public class Validator {
 
-	static private String dniRegex = "\\b\\d{8}[A-Z&&[^IÑOU]]\\b";
-	static private String nieRegex = "\\b[XYZ]\\d{7}[A-Z&&[^IÑOU]]\\b";
+	static private String dniRegex = "\\b\\d{8}[A-Z&&[^IÃ‘OU]]\\b";
+	static private String nieRegex = "\\b[XYZ]\\d{7}[A-Z&&[^IÃ‘OU]]\\b";
 	
 	static Pattern dniFormat = Pattern.compile(dniRegex);
 	static Pattern nieFormat = Pattern.compile(nieRegex);
 	
 	public static boolean dniValidator(String dni){
-		 Matcher verificador = dniFormat.matcher(dni);
-		 return verificador.find();
+		 Matcher verificator = dniFormat.matcher(dni);
+		 return verificator.find();
 	}
 	
 	public static boolean nieValidator(String nie) {
