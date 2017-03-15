@@ -7,7 +7,7 @@ public class Validator {
 	
 	// Regular expresion declaration
 	static private String dniRegex = "\\b\\d{8}[A-Z&&[^IÑOU]]\\b";
-	static private String nieRegex = "\\b\\[XYZ]d{8}\\b";
+	static private String nieRegex = "\\b[XYZ]\\d{7}[A-Z&&[^IÑOU]]\\b";
 	
 	// Variables holding compiled regex
 	static Pattern dniFormat = Pattern.compile(dniRegex);
