@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emt:carrera xmlns:emt="https://api.mobipalma.mobi/docs/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://api.mobipalma.mobi/docs/ cotxox.xsd">
+	<conductor>
+		<nombre>Pepe</nombre>
+		<modeloCoche>Seat</modeloCoche>
+		<matricula>4432GLT</matricula>
+		<valoracionMedia>3</valoracionMedia>
+		<ocupado>false</ocupado>
+		<valoraciones>7</valoraciones>
+	</conductor>
+	<tarjetaCredito>Visa, 23421345234567239</tarjetaCredito>
+	<origen>Palma</origen>
+	<destino>Soller</destino>
+	<tiempoEsperadoMinutos>23</tiempoEsperadoMinutos>
+	<distancia>23.2</distancia>
+	<costeTotal>50</costeTotal>
+	<propina>7</propina>
+
+
+</emt:carrera>
