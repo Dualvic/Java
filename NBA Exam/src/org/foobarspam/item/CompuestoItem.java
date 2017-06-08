@@ -9,14 +9,5 @@ public class CompuestoItem extends Item{
         super(nombre, true);
     }
 
-    @Override
-    public void iterable() {
-        for (int i= 0; i < hijos.size(); i++) {
-            if (hijos.get(i).isCompuesto() == true){
-                System.out.println(hijos.get(i).getNombre());
-            }else {
-                System.out.println("---------- [ " + hijos.get(i).getNombre());
-            }
-        }
-    }
+
 }

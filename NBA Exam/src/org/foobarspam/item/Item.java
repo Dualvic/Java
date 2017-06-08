@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Created by viC on 07/06/2017.
  */
 
-public abstract class Item implements Composite, Iterable {
+public class Item implements Composite, Iterable {
 
     private String nombre;
     private boolean compuesto;
@@ -48,6 +48,32 @@ public abstract class Item implements Composite, Iterable {
             if (hijo.getNombre().equals(nombre)) {
                 hijos.remove(hijo);
                 break;
+            }
+        }
+    }
+
+    public void composite(String[] newHijos) {
+        for (String hijo : newHijos) {
+            hijos.add(new SimpleItem(hijo));
+        }
+
+    }
+
+    public void composite(Item[] newHijos) {
+        for (Item hijo : newHijos) {
+            hijos.add(hijo);
+        }
+    }
+
+    @Override
+    public void iterable() {
+
+        System.out.println(this.getNombre());
+        for (Item hijo : this.hijos) {
+            if (hijo.isCompuesto()){
+                hijo.iterable();
+            }else {
+                System.out.println("---------- [ " + hijo.getNombre());
             }
         }
     }

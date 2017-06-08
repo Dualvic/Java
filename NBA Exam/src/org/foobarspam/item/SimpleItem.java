@@ -13,4 +13,14 @@ public class SimpleItem extends Item{
     public void iterable() {
 
     }
+
+    @Override
+    public void composite(String[] hijos) {
+
+    }
+
+    @Override
+    public void composite(Item[] hijos) {
+
+    }
 }

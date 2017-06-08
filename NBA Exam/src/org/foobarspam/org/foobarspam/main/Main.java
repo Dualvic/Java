@@ -75,9 +75,7 @@ public class Main {
         String[] equiposCentral = {"Bulls", "Cavs", "Pistons", "Pacers", "Bucks"};
         CompuestoItem Central = new CompuestoItem("Central");
         System.out.println(Central.getNombre());
-        for (String equipo : equiposCentral) {
-            Central.anhadir(new SimpleItem(equipo));
-        }
+        Central.composite(equiposCentral);
         Central.iterable();
 
 
@@ -87,9 +85,7 @@ public class Main {
 
 
         CompuestoItem SouthEast = new CompuestoItem("SouthEast");
-        for (String equipo : equiposSouthEast) {
-            SouthEast.anhadir(new SimpleItem(equipo));
-        }
+        SouthEast.composite(equiposSouthEast);
         System.out.println(SouthEast.getNombre());
         SouthEast.iterable();
 
@@ -101,18 +97,11 @@ public class Main {
 
         CompuestoItem East = new CompuestoItem("Este");
         System.out.println(East.getNombre());
-        for (CompuestoItem division:divisiones) {
-            East.anhadir(new CompuestoItem(division.getNombre()));
-            System.out.println(division.getNombre());
-            division.iterable();
-        }
-
-        // eliminar un hijo entre varios, profundidad 1
+        East.composite(divisiones);
+        East.iterable();
 
         System.out.println("\n *** eliminar un hijo a profundidad n *** \n");
 
-        // quitar la division Atlantic
-        // metodo quitar("Atlantic");	 se busca por el nombre de la división, no por el objeto.
 
         East.quitar("Atlantic");
         East.iterable();
@@ -121,5 +110,29 @@ public class Main {
 
         System.out.println("\n *** Liga NBA completa con sus conferencias, divisiones y equipos *** \n");
 
+        Item West = new CompuestoItem("Oeste");
+
+        String[] equiposNoroeste = {"Denver", "Minnesota", "Oklahoma", "Portland", "Utah"};
+        Item NorthEast = new CompuestoItem("Noroeste");
+        NorthEast.composite(equiposNoroeste);
+
+        String[] equiposSuroeste = {"Dallas", "Houston", "Memphis", "Pelicans", "Spurs"};
+        SouthEast.composite(equiposSuroeste);
+
+        String[] equiposPacifico = {"Warriors", "Clippers", "Lakers", "Suns", "Kings"};
+        Pacific.composite(equiposPacifico);
+
+        Item[] oesteEquipos = {NorthEast, SouthEast, Pacific};
+        West.composite(oesteEquipos);
+        
+        NBA.quitar("Este");
+        NBA.anhadir(West);
+        NBA.anhadir(East);
+        NBA.iterable();
+
     }
+
+
+
+
 }
