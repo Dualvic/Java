@@ -48,14 +48,17 @@ public class Main {
 
         itemCompuesto.iterable();
 
-        // añadir varios hijos desde array de strings y recorrer un item compuesto mostrando su nombre y el de sus hijos: n hijos, profundidad 1
 
         System.out.println("\n ***añadir varios hijos desde array de strings y recorrer un item compuesto mostrando su nombre y el de sus hijos: n hijos, profundidad 1 *** \n");
 
+        // añadir varios hijos desde array de strings y recorrer un item compuesto mostrando su nombre y el de sus hijos: n hijos, profundidad 1
         // crear division "Atlantic"
 
         String[] equiposAtlantic = {"Celtics", "Nets", "Knicks", "76ers", "Raptors"};
-
+        CompuestoItem Atlantic = new CompuestoItem("Atlantic");
+        for (String equipo : equiposAtlantic) {
+            Atlantic.anhadir(new SimpleItem(equipo));
+        }
 
 
         // recorrer un item compuesto por otros compuestos, mostrando su nombre y el de sus hijos: n hijos, profundidad n
