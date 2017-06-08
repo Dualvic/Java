@@ -12,7 +12,9 @@ public class CompuestoItem extends Item{
     @Override
     public void iterable() {
         for (int i= 0; i < hijos.size(); i++) {
-            if (isCompuesto()){
+            if (hijos.get(i).isCompuesto() == true){
+                System.out.println(hijos.get(i).getNombre());
+            }else {
                 System.out.println("---------- [ " + hijos.get(i).getNombre());
             }
         }

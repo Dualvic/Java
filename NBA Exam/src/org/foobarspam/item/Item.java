@@ -28,14 +28,28 @@ public abstract class Item implements Composite, Iterable {
         return this.nombre;
     }
 
+    public ArrayList<Item> getHijos() {
+        return this.hijos;
+    }
+
     public boolean isCompuesto() {
         return this.compuesto;
     }
 
-    //
+    // Metodos
 
     public void anhadir(Item item) {
         hijos.add(item);
+    }
+
+
+    public void quitar(String nombre) {
+        for (Item hijo : hijos) {
+            if (hijo.getNombre().equals(nombre)) {
+                hijos.remove(hijo);
+                break;
+            }
+        }
     }
 }
 
