@@ -37,7 +37,6 @@ public class Main {
         // añadir item simple a compuesto y comprobar nombre
         // metodo anhadir(equipo)
 
-        CompuestoItem NBA = new CompuestoItem("NBA");
         itemCompuesto.anhadir(itemSimple);
 
 
@@ -63,19 +62,28 @@ public class Main {
 
         // recorrer un item compuesto por otros compuestos, mostrando su nombre y el de sus hijos: n hijos, profundidad n
 
+        Atlantic.iterable();
+
         System.out.println("\n *** recorrer un item compuesto por otros compuestos, mostrando su nombre y el de sus hijos: n hijos, profundidad n *** \n");
 
         // crear liga "nba"
         // crear conferencia Este
 
+        CompuestoItem NBA = new CompuestoItem("NBA");
+        CompuestoItem Este = new CompuestoItem("Este");
+        NBA.anhadir(Este);
 
-        // crear un elemento compuesto de simples a partir de un array de strings
 
         System.out.println("\n *** crear un elemento compuesto de simples a partir de un array de strings *** \n");
 
-        String[] equiposCentral = {"Bulls", "Cavs", "Pistons", "Pacers", "Bucks"};
-
+        // crear un elemento compuesto de simples a partir de un array de strings
         // Crear division Central
+
+        String[] equiposCentral = {"Bulls", "Cavs", "Pistons", "Pacers", "Bucks"};
+        CompuestoItem Central = new CompuestoItem("Central");
+        for (String equipo : equiposCentral) {
+            Central.anhadir(new SimpleItem(equipo));
+        }
 
         // método composite()
 
@@ -89,8 +97,12 @@ public class Main {
         // crear un arraylist de equipos SouthEast
 
         // crear division SouthEast y añadir los equipos SouthEast
-
         // añadir division SouthEast
+
+        CompuestoItem SouthEast = new CompuestoItem("SouthEast");
+        for (String equipo : equiposSouthEast) {
+            SouthEast.anhadir(new SimpleItem(equipo));
+        }
 
 
         // crear un elemento compuesto de elementos compuestos a partir de un array de objetos compuestos
@@ -100,7 +112,6 @@ public class Main {
         // crear un ArrayList de divisiones
 
         // añadirlas a la conferencia este
-
 
 
         // eliminar un hijo entre varios, profundidad 1
